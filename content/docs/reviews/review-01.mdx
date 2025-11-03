@@ -1,8 +1,14 @@
 ---
 title: Review 01
-description: Review 01
 ---
 
-import { ReviewOne } from "@/components/commercn/reviews/review-01"
+```npm
+npx shadcn@latest add "https://commercn.com/review-01"
+```
 
-<ReviewOne />
+import { ReviewOne } from "@/components/commercn/reviews/review-01"
+import { BlockPreview } from '@/components/block-preview';
+
+<BlockPreview>
+    <ReviewOne />
+</BlockPreview>

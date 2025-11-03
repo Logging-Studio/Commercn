@@ -9,7 +9,7 @@ export function ReviewOne() {
             <CardContent className="p-6 space-y-6">
                     <Quote className="w-8 h-8 text-gray-300" />
 
-                <p className="text-gray-800 text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed">
                     Love the headphones. Been using them for a week now, they are comfortable and have a good sound quality.
                 </p>
 

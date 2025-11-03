@@ -48,17 +48,17 @@ export function OrderOne() {
                     </Button>
                 </div>
 
-                <div className="grid grid-cols-3 gap-4 bg-gray-100 rounded-lg p-4">
+                <div className="grid grid-cols-3 gap-4 bg-muted rounded-lg p-4">
                     <div>
-                        <p className="text-sm text-gray-600 mb-1">Order Status:</p>
+                        <p className="text-sm text-muted-foreground mb-1">Order Status:</p>
                         <Badge className="text-xs rounded-md">{orderData.status}</Badge>
                     </div>
                     <div>
-                        <p className="text-sm text-gray-600 mb-1">Order Date:</p>
+                        <p className="text-sm text-muted-foreground mb-1">Order Date:</p>
                         <p className="text-sm font-medium">{orderData.orderDate}</p>
                     </div>
                     <div>
-                        <p className="text-sm text-gray-600 mb-1">Delivery Date:</p>
+                        <p className="text-sm text-muted-foreground mb-1">Delivery Date:</p>
                         <p className="text-sm font-medium">{orderData.estimatedDelivery}</p>
                     </div>
                 </div>
@@ -77,12 +77,12 @@ export function OrderOne() {
                                     />
                                 </div>
                                 <div>
-                                    <h4 className="font-medium text-gray-900">{item.name}</h4>
-                                    <p className="text-sm text-gray-500">{item.description}</p>
+                                    <h4 className="font-medium">{item.name}</h4>
+                                    <p className="text-sm text-muted-foreground">{item.description}</p>
                                 </div>
                             </div>
                             <div className="text-right">
-                                <p className="font-semibold text-gray-900">${item.price}</p>
+                                <p className="font-semibold">${item.price}</p>
                                 <p className="text-sm text-gray-500">Quantity: {item.quantity}</p>
                             </div>
                         </div>
@@ -92,12 +92,12 @@ export function OrderOne() {
                 {/* Payment & Total */}
                 <div className="border-t border-gray-100 pt-4">
                     <div className="flex items-center justify-between">
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-muted-foreground">
                             <span>{orderData.payment.method}</span>
                         </div>
                         <div className="text-right">
-                            <span className="text-sm text-gray-500 mr-2">Total:</span>
-                            <span className="text-lg font-bold text-gray-900">${orderData.payment.total}</span>
+                            <span className="text-sm text-muted-foreground mr-2">Total:</span>
+                            <span className="text-lg font-bold">${orderData.payment.total}</span>
                         </div>
                     </div>
                 </div>

@@ -23,7 +23,7 @@ export function ShoppingCartOne() {
     const decrementQuantity = () => setQuantity(prev => Math.max(1, prev - 1))
 
     return (
-        <Card className="w-full max-w-[480px] bg-gray-100 border-0 shadow-none rounded-xl not-prose p-4 flex-row gap-4">
+        <Card className="w-full max-w-[480px] bg-muted border-0 shadow-none rounded-xl not-prose p-4 flex-row gap-4">
             <div className="w-24 h-24 bg-white rounded-xl overflow-hidden flex-shrink-0">
                 <img
                     src={cartItem.image}
@@ -48,11 +48,11 @@ export function ShoppingCartOne() {
                 </div>
 
                 <div className="flex items-center justify-between">
-                    <div className="flex items-center bg-white rounded-lg border border-gray-200">
+                    <div className="flex items-center bg-background text-foreground rounded-lg border border-gray-200">
                         <Button
                             variant="ghost"
                             size="icon"
-                            className="h-8 w-8 rounded-lg hover:bg-gray-100"
+                            className="h-8 w-8 rounded-lg hover:bg-muted"
                             onClick={decrementQuantity}
                         >
                             <Minus className="h-4 w-4" />
@@ -62,7 +62,7 @@ export function ShoppingCartOne() {
                         <Button
                             variant="ghost"
                             size="icon"
-                            className="h-8 w-8 rounded-lg hover:bg-gray-100"
+                            className="h-8 w-8 rounded-lg hover:bg-muted"
                             onClick={incrementQuantity}
                         >
                             <Plus className="h-4 w-4" />

@@ -1,41 +1,28 @@
 import { cn } from "@/lib/utils"
 import { Heart } from "lucide-react"
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
-interface ProductCardOneProps {
-  className?: string
-  product?: {
-    name: string
-    description: string
-    price: number
-    image: string
-    isBestSeller?: boolean
-    isFavorited?: boolean
-  }
+const productData = {
+  name: 'Vintage Denim Jacket',
+  description: "A classic denim jacket with a vintage wash and durable stitching. Perfect for everyday streetwear.",
+  price: 180.00,
+  image: "https://images.unsplash.com/photo-1649937408746-4d2f603f91c8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1226",
+  isBestSeller: true,
+  isFavorited: false
 }
 
-export function ProductCardOne({ className, product }: ProductCardOneProps) {
-  const defaultProduct = {
-    name: 'Vintage Denim Jacket',
-    description: "A classic denim jacket with a vintage wash and durable stitching. Perfect for everyday streetwear.",
-    price: 180.00,
-    image: "https://images.unsplash.com/photo-1649937408746-4d2f603f91c8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1226",
-    isBestSeller: true,
-    isFavorited: false
-  }
 
-  const productData = product || defaultProduct
+export function ProductCardOne() {
 
   return (
-    <Card className={cn("w-full max-w-[320px] mx-auto not-prose", className)}>
+    <Card className="w-full max-w-[320px]">
       <CardContent>
         {/* Product Image */}
         <div className="relative mb-6">
           <div className="bg-gray-100 rounded-2xl flex items-center justify-center h-[280px] relative overflow-hidden">
-            <img 
-              src={productData.image} 
+            <img
+              src={productData.image}
               alt={productData.name}
               className="w-full h-full object-fit"
             />
@@ -62,7 +49,7 @@ export function ProductCardOne({ className, product }: ProductCardOneProps) {
             {productData.description}
           </CardDescription>
         </div>
-        
+
 
         <div className="flex items-center justify-between">
           <p className="text-2xl font-bold">

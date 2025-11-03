@@ -112,10 +112,58 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.retro-theme {
+  --radius: 0;
+  --background: #F9F5F2;
+  --foreground: #000000;
+  --muted: #EDE3FF;
+  --muted-foreground: #5B3B98;
+  --card: #FFFFFF;
+  --card-foreground: #000000;
+  --popover: #FFFFFF;
+  --popover-foreground: #000000;
+  --border: #5B3B98;
+  --input: #FFFFFF;
+  --primary: #C4A1FF;
+  --primary-hover: #9678FF;
+  --primary-foreground: #000000;
+  --secondary: #E7F193;
+  --secondary-foreground: #000000;
+  --accent: #FE91E9;
+  --accent-foreground: #000000;
+  --destructive: #FE3B3B;
+  --destructive-foreground: #FFFFFF;
+  --ring: #000000;
+}
+
+.dark .retro-theme {
+  --background: #121014;
+  --foreground: #f5f5f5;
+  --muted: #2d2440;
+  --muted-foreground: #c7b6f3;
+  --card: #1a1820;
+  --card-foreground: #ffffff;
+  --popover: #1a1820;
+  --popover-foreground: #ffffff;
+  --border: #2a2a2e;
+  --input: #2a2a2e;
+  --primary: #C4A1FF;
+  --primary-hover: #9678FF;
+  --primary-foreground: #000000;
+  --secondary: #E7F193;
+  --secondary-foreground: #000000;
+  --accent: #FE91E9;
+  --accent-foreground: #000000;
+  --destructive: #FE3B3B;
+  --destructive-foreground: #ffffff;
+  --ring: #C4A1FF;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

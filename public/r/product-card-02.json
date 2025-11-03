@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "product-card-02",
+  "type": "registry:block",
+  "title": "Product Card 02",
+  "files": [
+    {
+      "path": "src/components/commercn/product-cards/product-card-02.tsx",
+      "content": "\"use client\"\n\nimport { Card, CardContent, CardTitle, CardDescription } from \"@/components/ui/card\"\nimport { Button } from \"@/components/ui/button\"\nimport { Heart } from \"lucide-react\"\nimport { cn } from \"@/lib/utils\"\nimport { useState } from \"react\"\n\nexport function ProductCardTwo() {\n  const [isFavorited, setIsFavorited] = useState(false)\n\n  const productData = {\n    name: \"Handmade Leather Purple Bag\",\n    category: \"wearable\",\n    bio: \"Turning insights into the impact with creative content.\",\n    followers: \"2.5K\",\n    following: \"522\",\n    profileImage: \"https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742\",\n    isVerified: true,\n    isFollowing: false,\n    price: 180.00\n  }\n\n\n  return (\n    <Card className={cn(\"w-full max-w-[320px] mx-auto border-0 rounded-3xl not-prose overflow-hidden p-0\")}>\n      <CardContent className=\"p-0 overflow-hidden\">\n        {/* Profile Image */}\n        <div className=\"aspect-[3/2] h-full relative overflow-hidden\">\n          <img\n            src={productData.profileImage}\n            alt={productData.name}\n            className=\"w-full h-full object-cover\"\n          />\n        </div>\n\n        {/* Profile Info */}\n        <div className=\"p-6 -mt-12 z-10 relative bg-card rounded-t-3xl\">\n          {/* Name and Verification */}\n          <div className=\"flex items-center justify-between gap-4 mb-4\">\n            <div>\n              <CardTitle>\n                {productData.name}\n              </CardTitle>\n              <CardDescription>\n                {productData.category}\n              </CardDescription>\n            </div>\n\n            <p className=\"text-2xl font-bold\">${productData.price}</p>\n          </div>\n\n          {/* Follow Button */}\n          <div className=\"flex items-center justify-between gap-2\">\n            <Button className=\"flex-1\">\n              Buy Now\n            </Button>\n            <Button size=\"icon\" variant=\"outline\" onClick={() => setIsFavorited(!isFavorited)}>\n              <Heart className={cn(\"w-6 h-6 transition-colors\", isFavorited ? \"fill-red-500 text-red-500\" : \"text-muted-foreground hover:text-red-500\")} />\n            </Button>\n          </div>\n        </div>\n      </CardContent>\n    </Card>\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

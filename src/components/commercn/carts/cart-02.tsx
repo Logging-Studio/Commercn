@@ -29,9 +29,9 @@ export function ShoppingCartTwo() {
     const decrementQuantity = () => setQuantity(prev => Math.max(1, prev - 1))
 
     return (
-        <Card className="w-full max-w-[400px] border border-black rounded-none shadow-none p-4 flex-row gap-4 not-prose">
+        <Card className="w-full max-w-[400px] border border-black dark:border-white rounded-none shadow-none p-4 flex-row gap-4 not-prose">
             {/* Product Image */}
-            <div className="w-28 h-28 border border-black">
+            <div className="w-28 h-28 border border-black dark:border-white">
                 <img
                     src={cartItem.image}
                     alt={cartItem.name}
@@ -52,7 +52,7 @@ export function ShoppingCartTwo() {
 
                 {/* Variant Selectors */}
                 <div className="flex gap-2">
-                    <div className="flex items-center border border-black rounded-none">
+                    <div className="flex items-center border border-black dark:border-white rounded-none">
                         <Button
                             variant="ghost"
                             size="icon-sm"
@@ -71,7 +71,7 @@ export function ShoppingCartTwo() {
                             <Plus className="h-4 w-4" />
                         </Button>
                     </div>
-                    <Button size="icon-sm" variant="outline" className="rounded-none border-black hover:bg-black hover:text-white h-full">
+                    <Button size="icon-sm" variant="outline" className="rounded-none border-black dark:border-white hover:bg-black hover:text-white h-full">
                         <X className="h-4 w-4" />
                     </Button>
                 </div>

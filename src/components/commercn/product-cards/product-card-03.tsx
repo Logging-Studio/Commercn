@@ -29,7 +29,6 @@ export function ProductCardThree() {
     return (
         <Card className={cn("w-full max-w-[320px] mx-auto border-2 border-black shadow-none rounded-none overflow-hidden p-0 not-prose")}>
             <CardContent className="p-0">
-                {/* Service Image */}
                 <div className="relative aspect-[1/1]">
                     <img
                         src={data.image}
@@ -37,7 +36,6 @@ export function ProductCardThree() {
                         className="w-full h-full object-cover"
                     />
 
-                    {/* Bookmark Button */}
                     <Button
                         variant="outline"
                         size="icon"
@@ -49,15 +47,13 @@ export function ProductCardThree() {
                                 "w-5 h-5 transition-colors",
                                 isBookmarked
                                     ? "fill-black text-black"
-                                    : "text-black"
+                                    : "text-foreground"
                             )}
                         />
                     </Button>
                 </div>
 
-                {/* Service Info */}
                 <div className="p-4">
-                    {/* Title */}
                     <div className="text-center mb-4">
                         <h3 className="text-2xl mb-1">
                             {data.title}
@@ -70,7 +66,6 @@ export function ProductCardThree() {
                         </p>
                     </div>
 
-                    {/* Variant Switcher */}
                     <div className="flex gap-2 mb-6 justify-center">
                         {data.varients.map((variant, index) => (
                             <Button
@@ -82,7 +77,7 @@ export function ProductCardThree() {
                                     "rounded-none border-2",
                                     selectedVariant === index
                                         ? "border-red-500 text-red-500 hover:bg-red-50 hover:text-red-600"
-                                        : "border-gray-900 text-gray-900"
+                                        : "border-foreground text-foreground"
                                 )}
                             >
                                 {variant.size}
@@ -90,7 +85,6 @@ export function ProductCardThree() {
                         ))}
                     </div>
 
-                    {/* Add to Cart Button */}
                     <Button size="lg" className="rounded-none w-full">
                         <PlusIcon className="ml-2 size-4" />Add to Cart
                     </Button>

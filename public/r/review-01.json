@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "review-01",
+  "type": "registry:block",
+  "title": "Review 01",
+  "files": [
+    {
+      "path": "src/components/commercn/reviews/review-01.tsx",
+      "content": "\"use client\"\n\nimport { Card, CardContent } from \"@/components/ui/card\"\nimport { Quote } from \"lucide-react\"\n\nexport function ReviewOne() {\n    return (\n        <Card className=\"w-full max-w-md border border-gray-300 not-prose p-0\">\n            <CardContent className=\"p-6 space-y-6\">\n                    <Quote className=\"w-8 h-8 text-gray-300\" />\n\n                <p className=\"text-lg leading-relaxed\">\n                    Love the headphones. Been using them for a week now, they are comfortable and have a good sound quality.\n                </p>\n\n                <div className=\"flex items-center gap-4\">\n                    <div className=\"w-12 h-12 rounded-full overflow-hidden\">\n                        <img\n                            src=\"https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/people/simple_person_c.png\"\n                            alt=\"Li Hua\"\n                            className=\"w-full h-full object-cover\"\n                        />\n                    </div>\n                    <div>\n                        <h4 className=\"font-semibold text-lg\">\n                            Li Hua\n                        </h4>\n                        <p className=\"text-gray-500 text-sm\">\n                            @lihua_rav\n                        </p>\n                    </div>\n                </div>\n            </CardContent>\n        </Card>\n    )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

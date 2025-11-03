@@ -96,8 +96,8 @@ export function ProductDetailOne() {
                 {/* Product Info Section */}
                 <div className="space-y-6">
                     <div>
-                        <a href="#" className="text-gray-600 hover:text-gray-900 inline-block mb-2">
-                            Clothing
+                        <a href="#" className="text-muted-foreground hover:text-gray-900 inline-block mb-2">
+                            {productData.category}
                         </a>
                         <h1 className="text-3xl font-bold">
                             {productData.name}
@@ -108,7 +108,7 @@ export function ProductDetailOne() {
                     </div>
 
                     <div className="flex items-end gap-2">
-                        <p className="text-3xl font-bold text-gray-900">
+                        <p className="text-3xl font-bold">
                             {productData.currency}{productData.originalPrice - productData.discount}
                         </p>
                         <p className="text-gray-400 font-medium text-2xl line-through">

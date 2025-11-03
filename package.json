@@ -8,7 +8,8 @@
     "start": "next start",
     "postinstall": "fumadocs-mdx",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@radix-ui/react-select": "^2.2.6",
@@ -23,6 +24,7 @@
     "next": "16.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "shadcn": "^3.5.0",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {

@@ -1,0 +1,95 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "name": "commercn",
+    "homepage": "https://commercn.com",
+    "items": [
+        {
+            "name": "cart-01",
+            "type": "registry:block",
+            "title": "Cart 01",
+            "files": [
+                {
+                    "path": "src/components/commercn/carts/cart-01.tsx",
+                    "type": "registry:component"
+                }
+            ]
+        },
+        {
+            "name": "cart-02",
+            "type": "registry:block",
+            "title": "Cart 02",
+            "files": [
+                {
+                    "path": "src/components/commercn/carts/cart-02.tsx",
+                    "type": "registry:component"
+                }
+            ]
+        },
+        {
+            "name": "order-01",
+            "type": "registry:block",
+            "title": "Order 01",
+            "files": [
+                {
+                    "path": "src/components/commercn/orders/order-01.tsx",
+                    "type": "registry:component"
+                }
+            ]
+        },
+        {
+            "name": "product-card-01",
+            "type": "registry:block",
+            "title": "Product Card 01",
+            "files": [
+                {
+                    "path": "src/components/commercn/product-cards/product-card-01.tsx",
+                    "type": "registry:component"
+                }
+            ]
+        },
+        {
+            "name": "product-card-02",
+            "type": "registry:block",
+            "title": "Product Card 02",
+            "files": [
+                {
+                    "path": "src/components/commercn/product-cards/product-card-02.tsx",
+                    "type": "registry:component"
+                }
+            ]
+        },
+        {
+            "name": "product-card-03",
+            "type": "registry:block",
+            "title": "Product Card 03",
+            "files": [
+                {
+                    "path": "src/components/commercn/product-cards/product-card-03.tsx",
+                    "type": "registry:component"
+                }
+            ]
+        },
+        {
+            "name": "product-detail-01",
+            "type": "registry:block",
+            "title": "Product Detail 01",
+            "files": [
+                {
+                    "path": "src/components/commercn/product-details/product-detail-01.tsx",
+                    "type": "registry:component"
+                }
+            ]
+        },
+        {
+            "name": "review-01",
+            "type": "registry:block",
+            "title": "Review 01",
+            "files": [
+                {
+                    "path": "src/components/commercn/reviews/review-01.tsx",
+                    "type": "registry:component"
+                }
+            ]
+        }
+    ]
+}

@@ -56,7 +56,7 @@ export function ProductCardTwo() {
               Buy Now
             </Button>
             <Button size="icon" variant="outline" onClick={() => setIsFavorited(!isFavorited)}>
-              <Heart className={cn("w-6 h-6 transition-colors", isFavorited ? "fill-red-500 text-red-500" : "text-gray-800 hover:text-red-500")} />
+              <Heart className={cn("w-6 h-6 transition-colors", isFavorited ? "fill-red-500 text-red-500" : "text-muted-foreground hover:text-red-500")} />
             </Button>
           </div>
         </div>

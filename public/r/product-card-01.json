@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "product-card-01",
+  "type": "registry:block",
+  "title": "Product Card 01",
+  "files": [
+    {
+      "path": "src/components/commercn/product-cards/product-card-01.tsx",
+      "content": "import { cn } from \"@/lib/utils\"\nimport { Heart } from \"lucide-react\"\nimport { Card, CardContent, CardTitle, CardDescription } from \"@/components/ui/card\"\nimport { Button } from \"@/components/ui/button\"\n\nconst productData = {\n  name: 'Vintage Denim Jacket',\n  description: \"A classic denim jacket with a vintage wash and durable stitching. Perfect for everyday streetwear.\",\n  price: 180.00,\n  image: \"https://images.unsplash.com/photo-1649937408746-4d2f603f91c8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1226\",\n  isBestSeller: true,\n  isFavorited: false\n}\n\n\nexport function ProductCardOne() {\n\n  return (\n    <Card className=\"w-full max-w-[320px]\">\n      <CardContent>\n        {/* Product Image */}\n        <div className=\"relative mb-6\">\n          <div className=\"bg-gray-100 rounded-2xl flex items-center justify-center h-[280px] relative overflow-hidden\">\n            <img\n              src={productData.image}\n              alt={productData.name}\n              className=\"w-full h-full object-fit\"\n            />\n\n            <Button variant=\"ghost\" size=\"icon\" className=\"absolute top-2 right-2\">\n              <Heart\n                className={cn(\n                  \"w-6 h-6 transition-colors\",\n                  productData.isFavorited\n                    ? \"fill-red-500 text-red-500\"\n                    : \"text-gray-800 hover:text-red-500\"\n                )}\n              />\n            </Button>\n          </div>\n        </div>\n\n        {/* Product Info */}\n        <div className=\"mb-4\">\n          <CardTitle className=\"text-xl leading-tight mb-2\">\n            {productData.name}\n          </CardTitle>\n          <CardDescription className=\"text-sm\">\n            {productData.description}\n          </CardDescription>\n        </div>\n\n\n        <div className=\"flex items-center justify-between\">\n          <p className=\"text-2xl font-bold\">\n            ${productData.price.toFixed(2)}\n          </p>\n\n          <Button>\n            Add to Cart\n          </Button>\n        </div>\n      </CardContent>\n    </Card>\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

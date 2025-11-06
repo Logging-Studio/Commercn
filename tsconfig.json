@@ -38,8 +38,17 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts"
-, "content/docs/carts/cart-item-01.mdx", "content/docs/reviews/review-01.mdx", "content/docs/categories/category-01.mdx", "content/docs/orders/order-01.mdx"  ],
+    ".next/dev/types/**/*.ts",
+    "content/docs/carts/cart-item-01.mdx",
+    "content/docs/reviews/review-01.mdx",
+    "content/docs/categories/category-01.mdx",
+    "content/docs/orders/order-01.mdx",
+    "content/docs/promo-banners/promo-banner-01.mdx",
+    "content/docs/promo-banners/promo-banner-02.mdx",
+    "content/docs/promo-banners/promo-banner-03.mdx",
+    ".next\\dev/types/**/*.ts",
+    ".next\\dev/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "promo-banner-01",
+  "type": "registry:block",
+  "title": "Promo Banner 01",
+  "files": [
+    {
+      "path": "src/components/commercn/promo-banners/promo-banner-01.tsx",
+      "content": "\"use client\"\n\nimport { X } from \"lucide-react\"\nimport { Button } from \"@/components/ui/button\"\nimport { cn } from \"@/lib/utils\"\nimport { useState } from \"react\"\n\nconst promoBannerData = {\n  message: \"🎉 Get 20% off your first order with code WELCOME20\",\n  link: \"/shop\",\n  linkText: \"Shop Now\",\n  backgroundColor: \"bg-primary\",\n  textColor: \"text-primary-foreground\",\n  isDismissible: true,\n}\n\nexport function PromoBannerOne() {\n  const [isVisible, setIsVisible] = useState(true)\n\n  if (!isVisible) return null\n\n  return (\n    <div\n      className={cn(\n        \"relative flex items-center justify-center px-4 py-3\",\n        promoBannerData.backgroundColor,\n        promoBannerData.textColor\n      )}\n    >\n      <div className=\"flex items-center justify-center gap-2 text-sm font-medium\">\n        <span>{promoBannerData.message}</span>\n        {promoBannerData.link && (\n          <a\n            href={promoBannerData.link}\n            className=\"underline underline-offset-4 hover:no-underline\"\n          >\n            {promoBannerData.linkText}\n          </a>\n        )}\n      </div>\n\n      {promoBannerData.isDismissible && (\n        <Button\n          variant=\"ghost\"\n          size=\"icon-sm\"\n          className=\"absolute right-2 hover:bg-primary-foreground/10\"\n          onClick={() => setIsVisible(false)}\n        >\n          <X className=\"h-4 w-4\" />\n        </Button>\n      )}\n    </div>\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "promo-banner-03",
+  "type": "registry:block",
+  "title": "Promo Banner 03",
+  "files": [
+    {
+      "path": "src/components/commercn/promo-banners/promo-banner-03.tsx",
+      "content": "\"use client\"\n\nimport { ArrowRight, X, Timer } from \"lucide-react\"\nimport { Button } from \"@/components/ui/button\"\nimport { cn } from \"@/lib/utils\"\nimport { useState } from \"react\"\n\nconst promoBannerData = {\n  icon: Timer,\n  message: \"Flash Sale Ends Today\",\n  description: \"Free shipping on all orders over $50\",\n  link: \"/sale\",\n  linkText: \"Shop Now\",\n  backgroundColor: \"bg-destructive\",\n  textColor: \"text-white\",\n  isDismissible: true,\n}\n\nexport function PromoBannerThree() {\n  const [isVisible, setIsVisible] = useState(true)\n  const Icon = promoBannerData.icon\n\n  if (!isVisible) return null\n\n  return (\n    <div\n      className={cn(\n        \"relative flex items-center justify-center px-4 py-4\",\n        promoBannerData.backgroundColor,\n        promoBannerData.textColor\n      )}\n    >\n      <div className=\"flex flex-col items-center justify-center gap-1 text-center sm:flex-row sm:gap-3\">\n        <div className=\"flex items-center gap-2\">\n          {Icon && <Icon className=\"h-5 w-5\" />}\n          <span className=\"font-bold text-base\">{promoBannerData.message}</span>\n        </div>\n        <span className=\"text-sm opacity-90\">{promoBannerData.description}</span>\n        {promoBannerData.link && (\n          <a\n            href={promoBannerData.link}\n            className=\"inline-flex items-center gap-1.5 rounded-md bg-white/20 px-3 py-1.5 text-sm font-semibold hover:bg-white/30 transition-colors\"\n          >\n            {promoBannerData.linkText}\n            <ArrowRight className=\"h-3.5 w-3.5\" />\n          </a>\n        )}\n      </div>\n\n      {promoBannerData.isDismissible && (\n        <Button\n          variant=\"ghost\"\n          size=\"icon-sm\"\n          className=\"absolute right-2 hover:bg-white/10\"\n          onClick={() => setIsVisible(false)}\n        >\n          <X className=\"h-4 w-4\" />\n        </Button>\n      )}\n    </div>\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

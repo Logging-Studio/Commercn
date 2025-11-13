@@ -26,8 +26,8 @@ export function CheckoutOne() {
 	);
 
 	return (
-		<div className="w-full max-w-6xl flex justify-between items-start gap-8">
-			<div className="flex-1">
+		<div className="w-full max-w-6xl flex flex-col md:flex-row justify-between items-start gap-8">
+			<div className="w-full order-2 md:order-1">
 				{/* <CardContent> */}
 					<form>
 						<FieldGroup>
@@ -49,7 +49,6 @@ export function CheckoutOne() {
 										<Input
 											id="email"
 											type="email"
-											defaultValue="josim.design@gmail.com"
 										/>
 									</Field>
 									<Field>
@@ -97,7 +96,7 @@ export function CheckoutOne() {
 									onValueChange={(value) =>
 										setShippingMethod(value as "home" | "pickup")
 									}
-									className="flex gap-4"
+									className="flex flex-col lg:flex-row gap-4"
 								>
 									<div
 										className={`flex flex-1 items-center space-x-3 p-3 rounded-lg border transition-colors ${shippingMethod === "home"
@@ -139,7 +138,7 @@ export function CheckoutOne() {
 				{/* </CardContent> */}
 			</div>
 
-			<div className="w-[400px] bg-gray-50 border p-4 rounded-xl">
+			<div className="w-full max-w-[400px] bg-gray-50 border p-4 rounded-xl order-1 md:order-2">
 				<h4 className="text-lg font-medium mb-6">Order Summary</h4>
 
 				<ul className="space-y-2">

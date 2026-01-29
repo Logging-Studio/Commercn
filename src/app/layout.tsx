@@ -26,7 +26,7 @@ export default function Layout({ children }: LayoutProps<"/">) {
 				src="https://cloud.umami.is/script.js"
 				data-website-id="7e98cb80-cce6-440e-8d23-b1a4abd6adfa"
 			/>
-			<body className="flex flex-col min-h-screen">
+			<body className="flex flex-col min-h-screen p-">
 				<RootProvider>{children}</RootProvider>
 			</body>
 		</html>

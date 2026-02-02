@@ -1,5 +1,6 @@
 "use client"
 
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
@@ -53,7 +54,7 @@ export function CategoryOne() {
 	return (
 		<section className="w-full max-w-7xl mx-auto">
 			{/* Header */}
-			<div className="flex flex-col md:flex-row justify-between gap-4 mb-8 lg:mb-10">
+			<div className="flex flex-col md:flex-row justify-between items-end gap-4 mb-8 lg:mb-10">
 				<div className="flex flex-col gap-1">
 					<h2 className="font-bold text-4xl">
 						Shop by Category
@@ -63,14 +64,16 @@ export function CategoryOne() {
 					</p>
 				</div>
 
-				<button className="group flex items-center gap-2 font-['Syne'] font-medium text-[16px] text-black dark:text-white hover:opacity-70 transition-opacity pb-1">
-					View all categories
-					<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-				</button>
+				<Button className="group" asChild>
+					<a href="#">
+						View all categories
+						<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+					</a>
+				</Button>
 			</div>
 
 			{/* Grid */}
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px]">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 				{categories.map((category) => (
 					<CategoryCard
 						key={category.id}
@@ -95,13 +98,10 @@ export function CategoryCard({ title, count, imageSrc, className }: CategoryCard
 	return (
 		<motion.div
 			className={cn(
-				"group relative overflow-hidden rounded-[16px] cursor-pointer h-[216px]",
+				"group relative overflow-hidden rounded-xl cursor-pointer h-56 flex flex-col justify-end",
 				className
 			)}
-			whileHover="hover"
-			initial="rest"
 		>
-			{/* Background Image */}
 			<div className="absolute inset-0">
 				<img
 					src={imageSrc}
@@ -110,37 +110,25 @@ export function CategoryCard({ title, count, imageSrc, className }: CategoryCard
 				/>
 			</div>
 
-			{/* Gradient Overlay - Matches Figma: from black/60 to transparent */}
-			<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+			<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
-			{/* Content */}
-			<div className="absolute bottom-0 left-0 p-[24px] w-full flex flex-col gap-1">
-				{/* Title */}
-				<h3 className="text-white font-['Syne'] font-bold text-[24px] leading-[32px]">
-					{title}
-				</h3>
-
-				{/* Row: Count + Arrow Button */}
-				<div className="flex items-center justify-between w-full">
-					<p className="text-white/90 font-['Syne'] font-medium text-[14px] leading-[20px]">
+			<div className="bottom-0 left-0 p-[24px] w-full flex items-end justify-between gap-4 relative">
+				<div className="shrink-0">
+					<h3 className="text-zinc-100 text-2xl font-semibold">
+						{title}
+					</h3>
+					<p className="text-white/90 font-medium text-sm">
 						{count}
 					</p>
-
-					{/* Hover Arrow Button - 32px size */}
-					<motion.div
-						className="w-[32px] h-[32px] bg-white rounded-full flex items-center justify-center text-black opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out"
-					>
-						<ArrowRight className="w-4 h-4" strokeWidth={2} />
-					</motion.div>
 				</div>
+
+
+				<motion.div
+					className="w-[32px] h-[32px] bg-white rounded-full flex items-center justify-center text-black opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out"
+				>
+					<ArrowRight className="w-4 h-4" strokeWidth={2} />
+				</motion.div>
 			</div>
-
-			{/* Border overlay (Inactive) */}
-			<div className="absolute inset-0 border border-white/10 dark:border-black/50 rounded-[16px] pointer-events-none transition-colors" />
-
-			{/* Active/Hover state border - Solid Black (Light) / Solid White (Dark) */}
-			<div className="absolute inset-0 border-[2px] border-transparent group-hover:border-black dark:group-hover:border-white rounded-[16px] pointer-events-none transition-colors duration-300" />
-
 		</motion.div>
 	);
 }

@@ -1,88 +1,102 @@
-"use client";
+'use client'
 
-import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
+import { Button } from "@/components/ui/button";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const categories = [
 	{
-		id: 1,
-		name: "RetroFit",
-		description: "Vintage-inspired athletic wear",
-		image:
-			"https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-		bgColor: "bg-gradient-to-br from-pink-200 to-pink-300",
-		textColor: "text-navy-900",
+		title: "Sports",
+		count: "1.5k+ Products",
+		image: "https://images.unsplash.com/photo-1762077656142-e359ebffb2f4?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 	},
 	{
-		id: 2,
-		name: "Denim�ra",
-		description: "Premium denim for the modern rebel",
-		image:
-			"https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-		bgColor: "bg-gradient-to-br from-blue-200 to-cyan-200",
-		textColor: "text-navy-900",
+		title: "Watches",
+		count: "400+ Products",
+		image: "https://images.unsplash.com/photo-1549972574-8e3e1ed6a347?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 	},
 	{
-		id: 3,
-		name: "Vel�ra",
-		description: "Softness, comfort, and timeless style",
-		image:
-			"https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-		bgColor: "bg-gradient-to-br from-orange-200 to-yellow-200",
-		textColor: "text-navy-900",
+		title: "Footwear",
+		count: "2.8k+ Products",
+		image: "https://images.unsplash.com/photo-1742392787511-8158c243b772?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+	},
+	{
+		title: "Accessories",
+		count: "1.9k+ Products",
+		image: "https://images.unsplash.com/photo-1624823183493-ed5832f48f18?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 	},
 ];
 
 export function CategoryTwo() {
 	return (
-		<div className="w-full max-w-7xl mx-auto p-6">
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				{categories.map((category) => (
-					<Card
-						key={category.id}
-						className={cn(
-							"group cursor-pointer border-0 shadow-lg rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1",
-							category.bgColor,
-						)}
-					>
-						<CardContent className="p-0 relative h-[400px]">
-							{/* Image Section */}
-							<div className="relative h-3/5 overflow-hidden">
-								<img
-									src={category.image}
-									alt={category.name}
-									className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-								/>
-								<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/20" />
-							</div>
+		<div className="flex flex-col lg:flex-row w-full items-center lg:items-stretch justify-center gap-4 max-w-4xl">
+			{/* Featured Left Card */}
+			<Card className="relative w-full lg:max-w-[300px] overflow-hidden bg-foreground border-none">
+				<div className="bg-gradient-to-bl from-gray-400 to-gray-400/10 absolute inset-0 absolute w-full h-full" />
+				<CardHeader className="relative h-full flex flex-col justify-between items-start">
+					<div className="mb-auto">
+						<h2 className="text-2xl mb-2 text-background font-medium">
+							New Arrivals
+						</h2>
+						<p className="text-muted text-sm">
+							Check out the latest additions to our store. Updated daily.
+						</p>
+					</div>
 
-							{/* Text Section */}
-							<div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-white/95 to-transparent">
-								<h2
-									className={cn(
-										"text-3xl font-bold mb-2 tracking-tight",
-										category.textColor,
-									)}
-								>
-									{category.name}
-								</h2>
-								<p
-									className={cn(
-										"text-sm font-medium opacity-80",
-										category.textColor,
-									)}
-								>
-									{category.description}
-								</p>
-							</div>
-							{/* Decorative Elements */}
-							<div className="absolute top-6 right-6 w-3 h-3 bg-white/40 rounded-full" />
-							<div className="absolute top-12 right-8 w-2 h-2 bg-white/30 rounded-full" />
-							<div className="absolute bottom-20 left-6 w-4 h-4 bg-white/20 rounded-full" />
-						</CardContent>
-					</Card>
+					{/* Button */}
+					<Button variant="link" className="text-background text-lg group hover:no-underline">
+						View All
+						<ArrowRight className="w-4 h-4 text-background transition-transform group-hover:translate-x-2" />
+					</Button>
+				</CardHeader>
+			</Card>
+
+			{/* Right Grid */}
+			<div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+				{categories.map((cat) => (
+					<CategoryListCard
+						key={cat.title}
+						title={cat.title}
+						count={cat.count}
+						imageSrc={cat.image}
+					/>
 				))}
 			</div>
 		</div>
+	);
+}
+
+interface CategoryListCardProps {
+	title: string;
+	count: string;
+	imageSrc: string;
+}
+
+export function CategoryListCard({ title, count, imageSrc }: CategoryListCardProps) {
+	return (
+		<Card className="w-full p-4 group">
+			<CardHeader className="flex p-0">
+				<div className="shrink-0 w-[64px] h-[64px] rounded-lg overflow-hidden">
+					<img
+						src={imageSrc}
+						alt={title}
+						className="w-full h-full object-cover mix-blend-multiply dark:mix-blend-normal"
+					/>
+				</div>
+
+				{/* Text Content */}
+				<div className="flex flex-col flex-1">
+					<CardTitle className="text-xl">{title}</CardTitle>
+					<CardDescription>{count}</CardDescription>
+				</div>
+
+				{/* Arrow Icon - Visible on hover */}
+				<div className="flex h-full items-center">
+					<ArrowRight className="w-4 h-4 text-black dark:text-white transition-all -translate-x-1 group-hover:translate-x-1 opacity-0 group-hover:opacity-100 duration-400" />
+				</div>
+			</CardHeader>
+		</Card>
 	);
 }

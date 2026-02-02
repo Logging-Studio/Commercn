@@ -18,6 +18,8 @@
 		"@radix-ui/react-select": "^2.2.6",
 		"@radix-ui/react-separator": "^1.1.8",
 		"@radix-ui/react-slot": "^1.2.3",
+		"@react-three/fiber": "^9.5.0",
+		"@react-three/postprocessing": "^3.0.4",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"fumadocs-core": "16.0.5",
@@ -26,10 +28,12 @@
 		"lucide-react": "^0.548.0",
 		"motion": "^12.23.24",
 		"next": "16.0.0",
+		"postprocessing": "^6.36.0",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
 		"shadcn": "^3.5.0",
-		"tailwind-merge": "^3.3.1"
+		"tailwind-merge": "^3.3.1",
+		"three": "^0.167.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.3.1",

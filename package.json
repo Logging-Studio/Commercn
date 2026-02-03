@@ -29,6 +29,7 @@
 		"motion": "^12.23.24",
 		"next": "16.0.0",
 		"postprocessing": "^6.36.0",
+		"radix-ui": "^1.4.3",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
 		"shadcn": "^3.5.0",

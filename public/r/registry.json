@@ -26,12 +26,78 @@
 			]
 		},
 		{
+			"name": "checkout-02",
+			"type": "registry:block",
+			"title": "Checkout 02",
+			"files": [
+				{
+					"path": "src/components/commercn/checkouts/checkout-02.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "checkout-03",
+			"type": "registry:block",
+			"title": "Checkout 03",
+			"files": [
+				{
+					"path": "src/components/commercn/checkouts/checkout-03.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
 			"name": "cart-02",
 			"type": "registry:block",
 			"title": "Cart 02",
 			"files": [
 				{
 					"path": "src/components/commercn/carts/cart-02.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "category-01",
+			"type": "registry:block",
+			"title": "Category 01",
+			"files": [
+				{
+					"path": "src/components/commercn/categories/category-01.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "category-02",
+			"type": "registry:block",
+			"title": "Category 02",
+			"files": [
+				{
+					"path": "src/components/commercn/categories/category-02.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "category-03",
+			"type": "registry:block",
+			"title": "Category 03",
+			"files": [
+				{
+					"path": "src/components/commercn/categories/category-03.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "category-04",
+			"type": "registry:block",
+			"title": "Category 04",
+			"files": [
+				{
+					"path": "src/components/commercn/categories/category-04.tsx",
 					"type": "registry:component"
 				}
 			]

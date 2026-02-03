@@ -167,6 +167,28 @@
 					"type": "registry:component"
 				}
 			]
+		},
+		{
+			"name": "review-02",
+			"type": "registry:block",
+			"title": "Review 02",
+			"files": [
+				{
+					"path": "src/components/commercn/reviews/review-02.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "review-03",
+			"type": "registry:block",
+			"title": "Review 03",
+			"files": [
+				{
+					"path": "src/components/commercn/reviews/review-03.tsx",
+					"type": "registry:component"
+				}
+			]
 		}
 	]
 }

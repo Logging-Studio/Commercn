@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "review-03",
+  "type": "registry:block",
+  "title": "Review 03",
+  "files": [
+    {
+      "path": "src/components/commercn/reviews/review-03.tsx",
+      "content": "import { Star } from \"lucide-react\";\nimport { CardContent } from \"@/components/ui/card\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\n\nconst review = {\n    text: \"I've never seen such attention to detail. This product has completely transformed my daily workflow.\",\n    author: \"Emily Davis\",\n    rating: 4,\n    image: \"https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/people/simple_person_c.png\",\n};\n\nexport function ReviewThree() {\n    return (\n        <div className=\"relative max-w-3xl\">\n            <div className=\"absolute top-0 -left-4 -right-4 h-[1px] bg-neutral-400\"></div>\n            <div className=\"absolute bottom-0 -left-4 -right-4 h-[1px] bg-neutral-400\"></div>\n            <div className=\"absolute left-0 -top-4 -bottom-4 w-[1px] bg-neutral-400\"></div>\n            <div className=\"absolute right-0 -top-4 -bottom-4 w-[1px] bg-neutral-400\"></div>\n\n            <CardContent className=\"flex flex-col items-center gap-6 py-12\">\n                <div className=\"flex gap-0.5\">\n                    {Array.from({ length: 5 }).map((_, i) => (\n                        <Star\n                            key={i}\n                            className={`size-5 stroke-1 ${i < review.rating ? \"fill-foreground/50 text-foreground\" : \"fill-muted-foreground/30 text-muted-foreground/30\"}`}\n                        />\n                    ))}\n                </div>\n\n                <blockquote className=\"text-2xl lg:text-3xl font-medium text-center leading-snug\">\n                    \"{review.text}\"\n                </blockquote>\n\n                <div className=\"flex flex-col items-center gap-1\">\n                    <Avatar className=\"size-12 border border-neutral-400\">\n                        <AvatarImage src={review.image} alt={review.author} />\n                        <AvatarFallback>JS</AvatarFallback>\n                    </Avatar>\n                    <h5 className=\"text-md font-medium\">{review.author}</h5>\n                </div>\n            </CardContent>\n        </div>\n    );\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

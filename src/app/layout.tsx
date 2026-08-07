@@ -6,33 +6,32 @@ import Script from "next/script";
 
 // TODO: Cache Components adoption. Refactor this route so this opt-out can be removed.
 // See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
-export const instant = false;
 
 const geist = Syne({
-	subsets: ["latin"],
+  subsets: ["latin"],
 });
 
 export const metadata = {
-	title: "CommerCN | Shadcn Ecommerce UI Blocks",
-	description:
-		"Shadcn UI blocks for e-commerce websites. Built with React, Next.js, and Tailwind CSS.",
-	keywords: ["Commercn", "Shadcn UI", "Shadcn E-commerce"],
-	icons: {
-		icon: "/favicon.ico",
-	},
+  title: "CommerCN | Shadcn Ecommerce UI Blocks",
+  description:
+    "Shadcn UI blocks for e-commerce websites. Built with React, Next.js, and Tailwind CSS.",
+  keywords: ["Commercn", "Shadcn UI", "Shadcn E-commerce"],
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function Layout({ children }: LayoutProps<"/">) {
-	return (
-		<html lang="en" className={geist.className} suppressHydrationWarning>
-			<Script
-				defer
-				src="https://cloud.umami.is/script.js"
-				data-website-id="7e98cb80-cce6-440e-8d23-b1a4abd6adfa"
-			/>
-			<body className="flex flex-col min-h-screen p-">
-				<RootProvider>{children}</RootProvider>
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en" className={geist.className} suppressHydrationWarning>
+      <Script
+        defer
+        src="https://cloud.umami.is/script.js"
+        data-website-id="7e98cb80-cce6-440e-8d23-b1a4abd6adfa"
+      />
+      <body className="flex flex-col min-h-screen p-">
+        <RootProvider>{children}</RootProvider>
+      </body>
+    </html>
+  );
 }

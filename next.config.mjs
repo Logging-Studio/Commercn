@@ -4,7 +4,6 @@ const withMDX = createMDX();
 
 /** @type {import('next').NextConfig} */
 const config = {
-  cacheComponents: true,
   reactStrictMode: true,
 };
 
